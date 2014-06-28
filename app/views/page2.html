@@ -1,0 +1,8 @@
+<p>This is the page2 view.</p>
+  <input ng-model="greeting" />
+  <input ng-model="user.name" />
+  Search: <input ng-model="searchFor" focus-me />
+  <p>Count: {{filtered.length}} / {{repos.length}}</p>
+  <table>
+    <tr ng-repeat="repo in (filtered = (repos | filter: {name: searchFor}))"><td>{{repo.name}}</td></tr>
+  </table>
